@@ -1,0 +1,36 @@
+  <section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add An App</h1>
+      {{#each errors}}
+        <div class="error">
+        <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/apps/add" method="POST">
+        <div class="input-group">
+          <label for="title">App Title</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="Dropbox, G Suite, O365" maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="technologies">Tags</label>
+          <input type="text" name="technologies" id="technologies" class="input-box" placeholder="sso, saml, bigbang"
+          maxlength="100" value={{technologies}}>
+        </div>
+        <div class="input-group">
+          <label for="budget">Budget (Leave blank for unknown)</label>
+          <input type="number" name="budget" id="budget" class="input-box" placeholder="eg. 500, 5000, 10000" value={{budget}}>
+        </div>
+        <div class="input-group">
+          <label for="description">App Description</label>
+          <textarea name="description" id="description" class="input-box" placeholder="Describe the details of the gig"
+            rows="10" value={{description}}></textarea>
+        </div>
+        <div class="input-group">
+          <label for="budget">Contact Email</label>
+          <input type="email" name="contact_email" id="contactemail" class="input-box" placeholder="Enter an email"
+            value={{contact_email}}>
+        </div>
+        <input type="submit" value="Add App" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

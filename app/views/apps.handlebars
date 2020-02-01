@@ -1,0 +1,35 @@
+<h1>Apps</h1>
+
+  <section id="gigs" class="container">
+    <h1>All Gigs</h1>
+
+    {{#each gigs}}
+    <div class="gig">
+      <h3>{{this.title}}</h3>
+      <p>{{description}}</p>
+      <p>Last Updated</p>
+      <p>Bigbang App?</p>
+      <p>SSO License?</p>
+      <p>License Info URL</p>
+      <h3>Supported Features:</h3>
+      <p>IdP-Initiated?</p>
+      <p>SP-Initiated?</p>
+      <p>Notes:</p>
+      <p>Supports SAML?</p>
+      <p>SAML URL</p>
+      <p>Projects Used On</p>
+      <p>Author</p>
+      <ul>
+        <li>Budget: {{budget}}</li>
+        <li><a href="mailto:{{contact_email}}" class="btn btn-reverse">Apply Now</a></li>
+      </ul>
+      <div class="tech">
+        <small>Tags: <span>{{technologies}}</span></small>
+      </div>
+    </div>
+
+    {{else}}
+    <p>No gigs available</p>
+   {{/each}}
+
+  </section>

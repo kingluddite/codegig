@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS `okta_sso`;
+CREATE DATABASE `okta_sso`;
